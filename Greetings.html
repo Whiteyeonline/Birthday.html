@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            text-align: center;
+            padding: 50px;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        #secondImage {
+            display: none;
+        }
+        audio {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Mom!</h1>
+    <div class="image-container">
+        <!-- First Image -->
+        <img id="firstImage" src="Phone Storage/happy birthday/im1.jpg" alt="Click Me" onclick="showSecondImage()">
+        <!-- Second Image -->
+        <img id="secondImage" src="Phone Storage/happy birthday/b1.jpg" alt="Surprise Image">
+    </div>
+    <!-- Music -->
+    <audio id="birthdaySong" controls>
+        <source src="Phone Storage/happy birthday/insta.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function showSecondImage() {
+            // Hide the first image
+            document.getElementById('firstImage').style.display = 'none';
+            // Show the second image
+            document.getElementById('secondImage').style.display = 'block';
+            // Play the song
+            var audio = document.getElementById('birthdaySong');
+            audio.style.display = 'block';
+            audio.play();
+        }
+    </script>
+</body>
+</html>
